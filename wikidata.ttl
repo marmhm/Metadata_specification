@@ -1,0 +1,33 @@
+@prefix : <http://example.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pav: <http://purl.org/pav/> .
+
+wd:Q33002955 a rdfs:Class ;
+    rdfs:label "Some Label"@en .
+
+:wikidata
+    a dcat:Dataset, wd:Q33002955 ;
+    dct:identifier "https://www.wikidata.org/entity/Q2013"^^xsd:anyURI ;
+    dct:title "Wikidata"^^xsd:string ;
+    schema:version "1.0.0"^^xsd:string ;
+    rdfs:seeAlso "https://viaf.org/viaf/partnerpages/WKP.html"^^xsd:anyURI ;
+    schema:url <http://wikidata.org> ;
+    dct:creator <https://wikimediafoundation.org> ;
+    dct:publisher <https://wikimediafoundation.org> ;
+    pav:createdOn "2012-10-29"^^xsd:date .
+
