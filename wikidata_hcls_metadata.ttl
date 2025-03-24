@@ -12,49 +12,69 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qudt: <http://qudt.org/schema/qudt/>.
 @prefix w3id: <https://w3id.org/mod#>.
-
+@prefix adms:<http://www.w3.org/TR/vocab-adms/>.
+@prefix cito: <http://purl.org/spar/cito> .
 :wikidata
     a dcat:Dataset;
     dct:identifier "https://www.wikidata.org/entity/Q2013"^^xsd:string ;
     rdf:type dcat:Dataset ;
     dct:title "Wikidata"@en ;
-    dct:alternative "Wikidata"@en ;
-    qudt:acronym "WD"^^xsd:string ;
-    dct:description """
-        Wikidata is a free and open knowledge base that can be read and edited by both humans and machines. 
-        Wikidata acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wiktionary, Wikisource, and others. Wikidata also provides support to many other sites and services beyond just Wikimedia projects! The content of Wikidata is available under a free license, exported using standard formats, and can be interlinked to other open data sets on the linked data web.
-    """@en ;
+    dct:alternative ""@en ;
+    qudt:acronym ""^^xsd:string ;
+    dct:description """ Wikidata is a free and open knowledge base that can be read and edited by ..."""@en ;
     foaf:page <https://www.wikidata.org> ;
     rdfs:seeAlso <https://www.wikidata.org/wiki/Wikidata:Introduction> ;
-    dct:creator <https://wikimediafoundation.org> ;
-    pav:createdOn "2020-01-01T15:30:00Z"^^xsd:dateTimeStamp ;
-    dct:publisher <https://wikimediafoundation.org> ;
-    foaf:fundedBy <https://wikimediafoundation.org> ;
+    pav:createdOn "2012-10-29T15:30:00Z"^^xsd:dateTimeStamp ;
     dct:modified "2024-11-25T15:30:00Z"^^xsd:dateTimeStamp ;
     dct:issued "2012-10-29T15:30:00Z"^^xsd:dateTimeStamp ;
     void:vocabulary <https://github.com/mkroetzsch/wda/blob/master/wikidata-ontology.owl> ;
     dct:conformsTo <https://www.wikidata.org/wiki/Wikidata:WikiProject_Schemas#:~:text=Wikidata%20Schemas%20are%20formally%20described,ShEx)%2C%20using%20ShExC%20syntax.> ;
-    :dataConformsTo <https://www.wikidata.org/wiki/EntitySchema:E10> ;
-    :referenceArticle <https://dl.acm.org/doi/10.1145/2629489> ;
-    qudt:acronym "WD"^^xsd:string;
+    dcat:distribution [dct:conformsTo <https://www.wikidata.org/wiki/EntitySchema:E10> ] ;
+    cito:citesAsAuthority <https://dl.acm.org/doi/10.1145/2629489> ;
     foaf:depiction <https://www.researchgate.net/figure/A-simplified-class-level-diagram-of-the-Wikidata-knowledge-graph-for-biomedical-entities_fig1_339985351> ;
-    :Statistics "https://www.wikidata.org/wiki/Wikidata:Statistics#"^^xsd:anyURI ;
-    dcat:distribution <https://www.wikidata.org/wiki/Wikidata:Database_download/nl> ;
+    void:triples "https://www.wikidata.org/wiki/Wikidata:Statistics#"^^xsd:anyURI ;
+    dcat:distribution [
+                       dct:title "latest dump of Wikidata";
+                       dct:description "latest dump of Wikidata in turtle format"; 
+                       dcat:mediaType "application/octet-stream";
+                       dcat:downloadURL <https://www.wikidata.org/wiki/Wikidata:Database_download/nl>;                        dcat:accessURL <> ;];
     dcat:dataService <https://www.wikidata.org/wiki/Q42722531> ;
-    void:sparqlEndpoint <https://query.wikidata.org/sparql> ;
+    void:sparqlEndpoint[ 
+                       dcat:endpointURL <https://query.wikidata.org/sparql> ; 
+                       dct:identifier "Wikidata SPARQL endpoint"^^rdfs:Literal ;
+                       dct:title "Wikidata Query Service"^^rdfs:Literal ;
+                       dcat:endpointDescription  """The Wikidata Query Service generally contains the full data of Wikidata,..."""^^rdfs:Literal ;
+                      adms:status  "OK";];
     w3id:sampleQueries "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples"^^xsd:anyURI ;
     dct:version "1.0"^^rdfs:Literal ;
     dct:license <https://www.wikidata.org/wiki/Q6938433> ;
     dcat:keyword "knowledge graph, wikidata, ontology"^^xsd:string ;
+    dcat:theme <open knowledge graph>
     dct:references <https://www.wikidata.org/wiki/Wikidata:Introduction> ;
     dct:language "en"@en ;
     void:uriRegexPattern "https://www.wikidata.org/wiki/{id}"^^xsd:string ;
-    void:target <https://www.wikidata.org> ;
     void:exampleResource <https://www.wikidata.org/wiki/Q2013> ;
     dct:accessRights <https://www.wikidata.org/wiki/Wikidata:Introduction> ;
     prov:hadPrimarySource <http://www.wikidata.org/entity/$1> ;
-    dcat:contactPoint <mailto:info@wikimedia.org> ;
-    dcat:contactPoint "wikidata@gmail.com"^^xsd:string.
+    prov:qualifiedAttribution [
+        prov:agent  :OwnerAgent ;
+        dcat:hadRole :owner ;] ;
+    prov:qualifiedAttribution [
+        prov:agent :contactAgent ;
+        dcat:hadRole :contact_point ;] 
+     .
 
+:eurovoc a void:Linkset ;
+    void:target :wikidata ;
+    void:triples "3068"^^xsd:integer ;
+ .
 
+:OwnerAgent a prov:Agent ;
+     foaf:name "Lucas_Werkmeister"^^xsd:string ;
+     foaf:mbox <mailto:lucas.werkmeister@wikimedia.de> ; 
+ .
 
+:contactAgent a prov:Agent ;
+     foaf:name "Lucas_Werkmeister"^^xsd:string ;
+     foaf:mbox <mailto:wikid@a@wikimedia.de> ; 
+ .

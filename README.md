@@ -24,4 +24,8 @@ install the python packages
 run the shape validation with kg metadata and the KG shacl specification.
 
         python validate.py -i wikidata.ttl -s kg-full.shacl.ttl
+
+# demonstration 
+
+We aim to publish Food-Claims-KG, an RDF KG for food health claims. First, we use the proposed specification to create a metadata file in Turtle format using Schema.org vocabularies. Then, we run the specification and validate its conformance to the standard. If any violations occur, we fix them. Finally, we add an index.html file with structured metadata and upload it to the project's GitHub repository. 
         
