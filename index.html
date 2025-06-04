@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Health Claims Knowledge Graph</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Food Health Claims Knowledge Graph",
+    "alternateName": "Food Claims KG",
+    "description": "A FAIR RDF knowledge graph based on 260 EU-authorized health claims, structured across food, health effect, target group, and supporting scientific evidence.",
+    "url": "https://maastrichtu-ids.github.io/food-claims-kg/",
+    "keywords": ["personalised nutrition", "food health claim", "knowledge graph", "FAIR data", "RDF", "EFSA"],
+    "creator": {
+      "@type": "Organization",
+      "name": "Maastricht University Institute of Data Science",
+      "url": "https://www.maastrichtuniversity.nl/research/institute-data-science"
+    },
+    "license": "https://opensource.org/licenses/MIT",
+    "includedInDataCatalog": {
+      "@type": "DataCatalog",
+      "name": "MaastrichtU IDS Dataset Catalog"
+    },
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "text/turtle",
+        "contentUrl": "https://raw.githubusercontent.com/MaastrichtU-IDS/food-claims-kg/main/data/food-claims.ttl"
+      }
+    ],
+    "version": "1.0",
+    "datePublished": "2024-02-26",
+    "dateModified": "2024-06-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Maastricht University"
+    }
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Food Health Claims Knowledge Graph</h1>
+    <p>This RDF knowledge graph captures 260 EU-authorized food health claims including the associated foods or ingredients, health effects, target populations, and scientific evidence. The data supports personalized nutrition applications and is fully FAIR-compliant.</p>
+
+    <h2>Download</h2>
+    <ul>
+      <li><a href="https://raw.githubusercontent.com/MaastrichtU-IDS/food-claims-kg/main/data/food-claims.ttl">RDF (Turtle format)</a></li>
+    </ul>
+
+    <h2>SPARQL Endpoint</h2>
+    <p><a href="https://graphdb.dumontierlab.com/repositories/FoodHealthClaimsKG">Query here</a></p>
+
+    <h2>Source Code</h2>
+    <p><a href="https://github.com/MaastrichtU-IDS/food-claims-kg">GitHub Repository</a></p>
+  </main>
+</body>
+</html>
