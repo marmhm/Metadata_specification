@@ -2,7 +2,7 @@
 
 This project aims to create a specification for the description of knowledge graphs.
 
-The KG specification [SHACL](data/shacl/full-hcls_shacl.ttl) was developed using [SHACL](https://www.w3.org/TR/shacl/) from a [community spreadsheet](https://docs.google.com/spreadsheets/d/1g6ypMzaRt6Z6rhNu4MMwgVdFJO0W47astvhXcxx66N4/edit?gid=0#gid=0)
+The KG specification [SHACL](data/shacl/full-hcls_shacl.ttl) was developed using [SHACL](https://www.w3.org/TR/shacl/) from a [community spreadsheet](https://docs.google.com/spreadsheets/d/1g6ypMzaRt6Z6rhNu4MMwgVdFJO0W47astvhXcxx66N4/edit?gid=1015207925#gid=1015207925)
 
 # setup the environment
 prepare the local environment
@@ -21,6 +21,15 @@ install the python packages
 run the shape validation with kg metadata and the KG shacl specification.
 
         python validate.py -i wikidata_hcls_metadata.ttl -s full-hcls_shacl.ttl
+
+
+## ✅ Validate LOD Metadata
+
+To generate and validate the Linked Open Data (LOD) metadata, run the following notebook:
+
+ LOD/lod_ttl_gen.ipynb 
+
+
 
 
 ## 🌐 Publish FAIR Metadata with JSON-LD on GitHub Pages
@@ -116,11 +125,7 @@ Test your page using [Google Rich Results Test](https://search.google.com/test/r
 
 Your dataset will now be Discoverable via Google Dataset Search.
 
-## ✅ Validate LOD Metadata
 
-To generate and validate the Linked Open Data (LOD) metadata, run the following notebook:
-
- LOD/lod_ttl_gen.ipynb 
 
 
         
