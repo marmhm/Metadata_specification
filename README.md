@@ -2,7 +2,7 @@
 
 This project aims to create a specification for the description of knowledge graphs.
 
-The KG specification [SHACL](data/shacl/full-hcls_shacl.ttl) was developed using [SHACL](https://www.w3.org/TR/shacl/) from a [community spreadsheet](https://docs.google.com/spreadsheets/d/1g6ypMzaRt6Z6rhNu4MMwgVdFJO0W47astvhXcxx66N4/edit?gid=1015207925#gid=1015207925)
+The KG specification [SHACL](shacl/full-hcls_shacl.ttl) was developed using [SHACL](https://www.w3.org/TR/shacl/) from a [community spreadsheet](https://docs.google.com/spreadsheets/d/1g6ypMzaRt6Z6rhNu4MMwgVdFJO0W47astvhXcxx66N4/edit?gid=1015207925#gid=1015207925)
 
 # setup the environment
 prepare the local environment
