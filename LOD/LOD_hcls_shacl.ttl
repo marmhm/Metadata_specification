@@ -234,7 +234,7 @@
             ] ;
             sh:property [
                 sh:path dct:conformsTo;
-                sh:minCount 1 ;
+                #sh:minCount 1 ;
                 sh:nodeKind sh:IRI;
                 sh:description "An established standard to which the distribution conforms." ;
             ] ;
